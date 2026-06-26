@@ -54,7 +54,7 @@ func main() {
 	}
 
 	router := chi.NewRouter()
-	
+
 	router.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   []string{"https://*", "http://*"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
@@ -95,4 +95,9 @@ func main() {
 
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
+}
+
+func unused() {
+    // this function does nothing
+    // and is called nowhere
 }
